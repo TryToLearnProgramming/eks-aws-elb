@@ -31,4 +31,6 @@
 	
 	helm install test-972-aws-elb-controler eks/aws-load-balancer-controller -n kube-system --set clusterName=test-972 --set serviceAccount.create=false --set serviceAccount.name=test-972-aws-load-balancer-service-account --set region=eu-west-1 --set vpcId=vpc-09f746110983de08f --set image.repository=392133049967.dkr.ecr.eu-west-1.amazonaws.com/amazon/aws-load-balancer-controller
 
-	### to delete controller - helm delete test-972-aws-elb-controler -n kube-system
+	### to delete controller - 
+	
+	helm delete test-972-aws-elb-controler -n kube-system
