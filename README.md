@@ -16,10 +16,12 @@
 ## create a service account for the claster
 
 ##1 create a policy
+
 	aws iam create-policy --policy-name ALBIngressControllerIAMPolicy --policy-document https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/master/docs/examples/iam-policy.json
 	### if not work then try to cteate it manually, here I created it manually
 
 ##2 create and assign a service account with the cluster
+
 	eksctl create iamserviceaccount --cluster=test-972 --namespace=kube-system --name=test-972-aws-load-balancer-service-account --attach-policy-arn=arn:aws:iam::392133049967:policy/AWSLoadBalancerControllerIAMPolicy-Test --override-existing-serviceaccounts --approve
 
 ## add aws-loadbalance-ingress
