@@ -18,7 +18,7 @@
 ##1 create a policy
 
 	aws iam create-policy --policy-name ALBIngressControllerIAMPolicy --policy-document https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/master/docs/examples/iam-policy.json
-	### if not work then try to cteate it manually, here I created it manually
+ ############ if not work then try to cteate it manually, here I created it manually
 
 ##2 create and assign a service account with the cluster
 
