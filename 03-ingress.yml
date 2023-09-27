@@ -40,6 +40,11 @@ metadata:
     alb.ingress.kubernetes.io/success-codes: '200'
     alb.ingress.kubernetes.io/healthy-threshold-count: '2'
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
+    ## enter the certificate arn
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-1:<>:certificate/73cd7c9d-7df9-48f7-b487-4389b34163f6
+    ## SSL redirect. Redirect from http to https
+    alb.ingress.kubernetes.io/ssl-redirect: '443'   
 spec:
   ingressClassName: test-class  # Ingress Class                       
   rules:
